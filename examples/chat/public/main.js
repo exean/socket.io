@@ -76,6 +76,9 @@ $(function() {
     // Don't fade the message in if there is an 'X was typing'
     const $typingMessages = getTypingMessages(data);
     if ($typingMessages.length !== 0) {
+      if (!options) {
+        options = {};
+      }
       options.fade = false;
       $typingMessages.remove();
     }
